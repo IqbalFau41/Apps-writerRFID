@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Registrasi Writer RFID</title>
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="../assets/vendors/core/core.css" />
+  <!-- Plugin CSS for this page -->
+  <link rel="stylesheet" href="../assets/vendors/sweetalert2/sweetalert2.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/fonts/feather-font/css/iconfont.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../assets/images/favicon.png" />
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <div class="page-wrapper full-page">
+      <div class="page-content d-flex align-items-center justify-content-center">
+        <div class="row w-100 mx-0 auth-page">
+          <div class="col-md-8 col-xl-6 mx-auto">
+            <div class="card">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="auth-form-wrapper px-4 py-5">
+                    <div class="noble-ui-logo d-block mb-2">
+                      Writer<span> RFID</span>
+                    </div>
+                    <h5 id="text-error" class="text-muted font-weight-normal mb-4">
+                      Pendaftaran Pengguna
+                    </h5>
+                    <form onsubmit="return formSubmit(event)">
+                      <div class="form-group">
+                        <label for="txtNama_Admin" class="control-label">Nama</label>
+                        <input id="txtNama_Admin" type="text" class="form-control" placeholder="Nama Lengkap"
+                          maxlength="50" oninput="capitalizeFirstLetter(this)" required />
+                      </div>
+                      <div class="form-group">
+                        <label for="txtEmail" class="control-label">Email</label>
+                        <input id="txtEmail" type="text" class="form-control" placeholder="Email" maxlength="50"
+                          required />
+                        <small id="emailError" class="text-danger"></small>
+                      </div>
+                      <div class="form-group" style="display: none;">
+                        <label for="txtProfile">txtProfile</label>
+                        <input id="txtProfile" type="text" placeholder="Email" required value="key.jpeg" />
+                        ></small>
+                      </div>
+                      <div style="display: none;" class="form-group">
+                        <label for="txtPermissions" class="control-label">Izin</label>
+                        <select id="txtPermissions" class="form-control" required>
+                          <option value="full_access">Akses Penuh</option>
+                          <option value="limited_access">Akses Terbatas</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="txtPassword" class="control-label">Password</label>
+                        <input id="txtPassword" type="password" class="form-control" placeholder="Password"
+                          autocomplete="current-password" maxlength="10" required />
+                        <small id="passwordError" class="text-danger"></small>
+                      </div>
+                      <div class="mt-3">
+                        <button id="btmTambah" type="submit"
+                          class="btn btn-primary mr-2 mb-2 mb-md-0 text-white">Tambahkan</button>
+                        <button href="#" id="btnLogout"
+                          class="btn btn-secondary float-right mr-2 mb-2 mb-md-0 text-white">
+                          Kembali
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JS -->
+  <script src="../assets/vendors/core/core.js"></script>
+  <!-- Plugin JS for this page -->
+  <script src="./js/load-user.js"></script>
+  <script src="./js/register.js"></script>
+  <script src="../assets/vendors/sweetalert2/sweetalert2.min.js"></script>
+  <script src="../assets/vendors/promise-polyfill/polyfill.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../assets/vendors/feather-icons/feather.min.js"></script>
+  <script src="../assets/js/template.js"></script>
+</body>
+
+</html>
